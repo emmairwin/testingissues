@@ -1,0 +1,43 @@
+name: Bug Report
+description: File a bug report for Hydra Gaming
+title: "Description "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: 
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version of Unity where you running?
+      placeholder: 2019.4.21f1 is our current default
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: dropdown
+    id: aboutyou
+    attributes:
+      label: How would you describe your experience in game development?
+      multiple: true
+      options:
+        - Student
+        - Independent game developer
+        - Game developer at a company/org
+        - Hobbiest (I do this for fun)
+        - Other
